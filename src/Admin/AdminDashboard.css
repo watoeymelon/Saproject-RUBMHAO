@@ -1,39 +1,60 @@
-.dashboard-container {
-    margin-left: 300px; /* ระยะห่างจาก Sidebar */
+/* ตั้งค่าสำหรับคอนเทนเนอร์หลัก */
+.admin-dashboard-container {
     padding: 20px;
-    background-color: #f4f6f9;
-    min-height: 100vh;
+    margin: 40px auto;
+    max-width: calc(100% - 280px); /* ขยายให้เต็มหน้าจอมากขึ้น */
+    margin-left: 260px; /* ระยะห่างจาก sidebar */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-  
-h1 {
-    font-size: 28px;
+
+/* ตั้งค่าสำหรับหัวข้อ */
+.admin-dashboard-container h2 {
     margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
 }
-  
-p {
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-  
-.dashboard-cards {
+
+/* ตั้งค่าสำหรับแผนภูมิ */
+.chart-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* จัดกราฟไปกลาง */
+    align-items: center; /* จัดกราฟให้แนวกลางในแนวตั้ง */
+    width: 100%;
+    margin: auto;
+    padding: 20px;
 }
-  
-.dashboard-box { 
+
+/* ตั้งค่าสำหรับตารางสรุปข้อมูล */
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
-.dashboard-box h2 { 
-    font-size: 20px;
-    margin-bottom: 10px;
+
+.summary-table th,
+.summary-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
-  
-.dashboard-box p { 
-    font-size: 14px;
-    color: #7a7a7a;
+
+.summary-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.summary-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.summary-table tr:hover {
+    background-color: #e9ecef; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
 }

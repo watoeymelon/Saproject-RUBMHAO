@@ -43,6 +43,7 @@ import Task from './Task/task';
 import TaskProvider from './Context/TaskContext';
 import TaskAdmin from './Admin/taskadmin';
 import TaskDetails from './Task/TaskDetails';
+import Materialadmin from './Admin/materialadmin';
 
 
 
@@ -96,6 +97,8 @@ function App() {
         <Route path="/task" element={<Task/>} />
         <Route path="/taskadmin" element={<TaskAdmin />} />
         <Route path="/task/:id" element={<TaskDetails />} />
+        <Route path="/materialadmin" element={<Materialadmin/>} />
+
         </Routes>
     </Router>
     </TaskProvider>

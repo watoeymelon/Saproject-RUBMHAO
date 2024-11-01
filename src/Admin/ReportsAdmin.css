@@ -1,56 +1,50 @@
-
 .reports-admin-container {
-    padding: 20px;
-    margin-left: 300px; /* เพิ่มระยะห่างจาก Sidebar เป็น 260px เพื่อให้ชิดน้อยลง */
-    max-width: 1000px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .reports-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .report-item {
-    padding: 12px 15px;
-    background-color: white;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-  }
-  
+  padding: 20px;
+  margin: 40px auto;
+  max-width: calc(100% - 280px); /* ขยายให้เต็มหน้าจอมากขึ้น */
+  margin-left: 260px; /* ระยะห่างจาก sidebar */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .sidebar {
-    width: 260px; 
-    background-color: #2c3e50;
-    height: 100vh;
-    padding: 20px;
-    position: fixed; 
-    top: 0;
-    left: 0;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 15px;
-  }
-  
-  .sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .sidebar a:hover {
-    text-decoration: underline;
-    color: #007bff;
-  }
-  
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.feedback-table th, .feedback-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.feedback-table th {
+  background-color: #f2f2f2;
+}
+
+.feedback-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.feedback-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.action-icon {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.approve-icon {
+  color: green;
+}
+
+.delete-icon {
+  color: red;
+}
+
+.approved-text {
+  color: #28a745;
+  font-weight: bold;
+}

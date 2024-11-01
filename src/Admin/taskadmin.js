@@ -45,6 +45,48 @@ const TaskAdmin = () => {
         <div className="task-admin-container">
             <h1 className='text-center'>Task Admin</h1>
             <hr />
+            <div className="task-table-container">
+                <table className="task-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Start Date</th>
+                            <th>Deadline</th>
+                            <th>Description</th>
+                            <th>Assigned To</th>
+                            <th>Priority</th>
+                            <th>Estimated Time</th>
+                            <th>Progress</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tasks.map(task => (
+                            <tr key={task.id}>
+                                <td>{task.project}</td>
+                                <td>{task.status}</td>
+                                <td>{task.startDate}</td>
+                                <td>{task.deadline}</td>
+                                <td>{task.description}</td>
+                                <td>{task.assignedTo}</td>
+                                <td>{task.priority}</td>
+                                <td>{task.estimatedCompletionTime}</td>
+                                <td>{task.progress}</td>
+                                <td>
+                                    <button 
+                                        className="action-button" 
+                                        onClick={() => handleStatusChange(task.id)}
+                                    >
+                                        Change Status
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
             <form onSubmit={handleSubmit} className="task-form">
                 <input 
                     type="text" 
@@ -125,50 +167,6 @@ const TaskAdmin = () => {
                 />
                 <button type="submit" className="submit-button">Add Task</button>
             </form>
-
-            <h2>Existing Tasks</h2>
-            <hr />
-            <div className="task-table-container">
-                <table className="task-table">
-                    <thead>
-                        <tr>
-                            <th>Project</th>
-                            <th>Status</th>
-                            <th>Start Date</th>
-                            <th>Deadline</th>
-                            <th>Description</th>
-                            <th>Assigned To</th>
-                            <th>Priority</th>
-                            <th>Estimated Time</th>
-                            <th>Progress</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tasks.map(task => (
-                            <tr key={task.id}>
-                                <td>{task.project}</td>
-                                <td>{task.status}</td>
-                                <td>{task.startDate}</td>
-                                <td>{task.deadline}</td>
-                                <td>{task.description}</td>
-                                <td>{task.assignedTo}</td>
-                                <td>{task.priority}</td>
-                                <td>{task.estimatedCompletionTime}</td>
-                                <td>{task.progress}</td>
-                                <td>
-                                    <button 
-                                        className="action-button" 
-                                        onClick={() => handleStatusChange(task.id)}
-                                    >
-                                        Change Status
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
         </div>
     );
 };

@@ -11,7 +11,7 @@ function Login({ setRole }) {
     e.preventDefault(); // ป้องกันการรีเฟรชหน้า
     if (username === 'admin' && password === '1212312121') {
       setRole('admin');
-      navigate('/navadmin'); // เปลี่ยนเส้นทางไปยังหน้า admin
+      navigate('/admindashboard');
     } else if (username === 'user' && password === '123123123') {
       setRole('user');
       navigate('/');
